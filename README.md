@@ -2,14 +2,20 @@
 
 ## การติดตั้ง
 
-### 1. Backend
+### 1. โคลน Repository
+```bash
+git clone <repository-url>
+cd <project-folder>
+```
+
+### 2. ติดตั้ง Backend
 ```bash
 cd attendance-backend
 npm install
 npm start
 ```
 
-### 2. Frontend
+### 3. ติดตั้ง Frontend (Terminal ใหม่)
 ```bash
 cd attendance
 npm install
@@ -31,3 +37,12 @@ npm run dev
 - ✅ เช็คชื่อเข้าเรียน
 - ✅ รายงานการเข้าเรียน
 - ✅ จัดการผู้ใช้ระบบ
+
+## โครงสร้างโปรเจค
+
+```
+attendance-system/
+├── attendance/          # Frontend (React + Vite)
+├── attendance-backend/  # Backend (Node.js + Express)
+└── README.md
+```
