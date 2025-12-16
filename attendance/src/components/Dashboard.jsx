@@ -27,12 +27,12 @@ function Dashboard({ username, onLogout }) {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--theme-background)' }}>
       {/* Header */}
       <header style={{
-        backgroundColor: '#4a90e2',
-        padding: '15px 20px',
-        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+        backgroundColor: 'var(--theme-background)',
+        borderBottom: '1px solid var(--theme-cardBorder)',
+        padding: '15px 20px'
       }}>
         <div style={{
           display: 'flex',
@@ -54,7 +54,7 @@ function Dashboard({ username, onLogout }) {
           </h1>
           
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-            <span style={{ color: 'white' }}>{username}</span>
+            <span style={{ color: 'var(--theme-text)' }}>{username}</span>
             <button
               onClick={() => {
                 if (confirm('คุณต้องการออกจากระบบหรือไม่?')) {
