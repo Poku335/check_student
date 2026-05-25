@@ -41,18 +41,3 @@
 | รายงาน | สถิติการเข้าเรียน |
 | โปรไฟล์ | ข้อมูลส่วนตัว |
 
----
-
-## การเปิดใช้งาน
-
-```bash
-# Backend (port 3000)
-cd attendance-backend
-npm start
-
-# Frontend (port 5173)
-cd attendance-v2
-npm run dev
-```
-
-เข้าใช้งานที่: http://localhost:5173
