@@ -1,48 +1,58 @@
-# ระบบเช็คชื่อเข้าเรียน
+# ระบบเช็คชื่อเข้าเรียน (Attendance Management System)
 
-## การติดตั้ง
+## หน้า Login
 
-### 1. โคลน Repository
+![Login Page](screenshot-01-login.png)
+
+หน้าเข้าสู่ระบบมี 2 โหมด:
+- **เข้าสู่ระบบ** — ใส่ Username และ Password
+- **สมัครสมาชิก** — สำหรับสร้างบัญชีใหม่
+
+### บัญชีผู้ใช้เริ่มต้น
+
+| Username | Password | ชื่อ |
+|----------|----------|------|
+| `admin` | `password` | ผู้ดูแลระบบ |
+| `teacher1` | `password` | อาจารย์สมศักดิ์ |
+| `teacher2` | `password` | อาจารย์วิไล |
+
+---
+
+## หน้า Dashboard
+
+![Dashboard](screenshot-02-dashboard.png)
+
+แสดงภาพรวมของระบบประกอบด้วย:
+
+| ข้อมูล | ค่า |
+|--------|-----|
+| นักเรียนทั้งหมด | 150 คน |
+| วิชาเรียน | 12 วิชา |
+| เข้าเรียนวันนี้ | 142 คน |
+| ขาดเรียนวันนี้ | 8 คน |
+
+### เมนูหลัก
+
+| เมนู | คำอธิบาย |
+|------|----------|
+| เช็คชื่อ | บันทึกการเข้าเรียน |
+| จัดการวิชา | เพิ่ม แก้ไข วิชาเรียน |
+| จัดการผู้ใช้ | เพิ่ม แก้ไข ผู้ใช้งาน |
+| รายงาน | สถิติการเข้าเรียน |
+| โปรไฟล์ | ข้อมูลส่วนตัว |
+
+---
+
+## การเปิดใช้งาน
+
 ```bash
-git clone <repository-url>
-cd <project-folder>
-```
-
-### 2. ติดตั้ง Backend
-```bash
+# Backend (port 3000)
 cd attendance-backend
-npm install
 npm start
-```
 
-### 3. ติดตั้ง Frontend (Terminal ใหม่)
-```bash
-cd attendance
-npm install
+# Frontend (port 5173)
+cd attendance-v2
 npm run dev
 ```
 
-## การใช้งาน
-
-1. เปิด http://localhost:5173
-2. เข้าสู่ระบบด้วย:
-   - Username: `admin`
-   - Password: `password123`
-
-## ฟีเจอร์
-
-- ✅ เข้าสู่ระบบ/สมัครสมาชิก
-- ✅ จัดการข้อมูลนักเรียน
-- ✅ จัดการรายวิชา
-- ✅ เช็คชื่อเข้าเรียน
-- ✅ รายงานการเข้าเรียน
-- ✅ จัดการผู้ใช้ระบบ
-
-## โครงสร้างโปรเจค
-
-```
-attendance-system/
-├── attendance/          # Frontend (React + Vite)
-├── attendance-backend/  # Backend (Node.js + Express)
-└── README.md
-```
+เข้าใช้งานที่: http://localhost:5173
